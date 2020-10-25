@@ -82,7 +82,7 @@ int main(int argc, char** args)
 */
 
 // Урок 2.6
-
+/*
 #include <iostream>
 
 using namespace std;
@@ -106,5 +106,128 @@ int main(int argc, char** args)
     char str[7] = "string";
     print(str);
     print(array);
+    return 0;
+}
+*/
+
+
+// Урок 3.1  (ДЗ1)
+/*
+#include <iostream>
+
+using namespace std;
+
+namespace geek
+{
+    int a = 1;
+    int b = 2;
+    int c = a + b;
+}
+
+int main(int argc, char** args)
+{
+    cout << geek :: c << endl;
+    return 0;
+}
+*/
+
+// Урок 3.2 (ДЗ2)
+/*
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char** args)
+{
+    cout << "Введите целое число: ";
+    int a;
+    cin >> a;
+
+    int c;
+    int d;
+
+    if (a > 5)  {
+        cout << "Введите ещё одно целое число: " << endl;
+        int b;
+        cin >> b;
+            if ((b > 5) && (b < 10))    {
+                c = b - 5;
+            }
+
+    } else {
+        d = 5 - a;
+    }
+
+    ((c > 0) || (d > 0)) ? cout << "Результат вычислений положительный" << endl : cout << "Результат вычислений отрицательный" << endl;
+
+    return 0;
+} */
+
+// Урок 3.3 (ДЗ3)
+/*
+#include <iostream>
+
+using namespace std;
+
+enum constant_set
+{
+    csConstant1 = 0,
+    csConstant2 = 1,
+    csConstant3 = 2,
+    csConstant4 = 3,
+    csConstant5 = 4,
+    csConstant6 = 5
+}c_set;
+
+int main(int argc, char** args)
+{
+    int a;
+    cout << "Введите целое знаковое число: ";
+    cin >> a;
+
+    switch(a)
+    {
+       case csConstant1:
+       case csConstant2:
+       case csConstant3:
+            cout << "Указали число от 0 до 2" << endl;
+            break;
+       case csConstant4:
+       case csConstant5:
+       case csConstant6:
+            cout << "Указали число от 3 до 5" << endl;
+            break;
+       default:
+            cout << "Указали число либо меньше 0 или больше 5" << endl;
+            break;
+    }
+
+    return 0;
+} */
+
+// Урок 3.4
+
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char** args)
+{
+    int a;
+    int b;
+
+    do
+    {
+        cout << "Введите целое беззнаковое число: " << endl;
+        cin >> a;
+
+        (a > 3) ? cout << a << endl : cout << "Повторите ввод" << endl;
+
+        do {
+            cout << a-- << endl;
+        } while (a > 0);
+
+    } while (a <= 3);
+
     return 0;
 }
